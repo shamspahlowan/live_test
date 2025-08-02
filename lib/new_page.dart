@@ -11,41 +11,36 @@ class NewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Add Employee",
           style: TextStyle(fontWeight: FontWeight.w500),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Name"),
-            TextFormField(
-              controller: nameController,
-              decoration: const InputDecoration(),
-            ),
+            Text("Name"),
+            TextFormField(controller: nameController),
 
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
 
-            const Text("Age"),
+            Text("Age"),
             TextFormField(
               controller: ageController,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
 
-            const Text("Salary"),
+            Text("Salary"),
             TextFormField(
               controller: salaryController,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(),
             ),
 
-            const SizedBox(height: 28),
+            SizedBox(height: 28),
 
             Center(
               child: ElevatedButton(
@@ -53,7 +48,7 @@ class NewPage extends StatelessWidget {
                   // kono kisu korte bola hoi nai
                   print("jani nah ki kkorbo");
                 },
-                child: const Text("Add Employee"),
+                child: Text("Add Employee"),
               ),
             ),
           ],
